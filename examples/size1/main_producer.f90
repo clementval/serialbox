@@ -4,7 +4,7 @@ PROGRAM main_producer
   INTEGER :: i
  
   DO i = 1, 256
-    a(1,i) = i
+    a(1,i) = 10
   END DO
 
   PRINT *, 'CALL serialize with sum(a)=', sum(a)
