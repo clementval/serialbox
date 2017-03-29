@@ -287,7 +287,7 @@ class Savepoint(object):
         fs_destroy_savepoint(self.savepoint)
 
     def __repr__(self):
-        return '<savepoint {0}>'.format(self.name)
+        return '<savepoint {0}>'.format(str(self))
 
     def __str__(self):
         return self.name + '[ ' + ' '.join(['{0}:{1}'.format(*i) for i in self.metainfo.items()]) + ' ]'
