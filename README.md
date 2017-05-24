@@ -32,7 +32,7 @@ for building the documentation ```make doc```
 
 ## CSCS Environment
 
-On daint, greina, kesch and lema a Serialbox installation is provided by jenkins (daily checkout of MeteoSwiss-APN master). If you want to compile and install Serialbox manually you can do so using the build environment.
+On daint and kesch a Serialbox installation is provided by jenkins (daily checkout of MeteoSwiss-APN master). If you want to compile and install Serialbox manually you can do so using the build environment.
 
 Go to your checkout of Serialbox, then execute:
 
