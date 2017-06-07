@@ -106,9 +106,10 @@ class Visualizer:
     
     def _get_field(self):
         if self.plotHalo:
-            return np.rot90(self.field[:, :, self.curklevel])
+            return np.rot90(self.field[:, :, int(self.curklevel)])
         else:
-            return np.rot90(self.field[self.istart:self.iend, self.jstart:self.jend, self.curklevel])
+            return np.rot90(self.field[self.istart:self.iend, self.jstart:self.jend, int(self.curklevel)])
+
 
 
 
