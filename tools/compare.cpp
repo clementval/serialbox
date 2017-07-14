@@ -175,6 +175,8 @@ int compare(const std::string& directory1, const std::string& basename1,
 
 	vector<Savepoint> savepoints = serializer1.savepoints();
 
+        bool hasDifferences = false;
+
 	for (int i = 0; i < savepoints.size(); i++)
 	{
 		if (savepoints[i].name().substr(savepoints[i].name().size() - 4, 4) != "-out")
@@ -241,10 +243,15 @@ int compare(const std::string& directory1, const std::string& basename1,
 				std::cerr << "Unsupported type: " << info1.type() << std::endl;
 				return 2;
 			}
+                        hasDifferences = hasDifferences | !equal;
 		}
 	}
 
 	// return (int) (!equal);
+	if (hasDifferences) 
+        {
+                return 1;
+        }
 	return 0;
 }
 
